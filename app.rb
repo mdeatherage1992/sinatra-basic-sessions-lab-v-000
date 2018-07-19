@@ -13,7 +13,8 @@ get '/' do
 end
 
 post '/checkout' do
-  
+  @items = params[:items]
+  @items.each do |item|
 end
 
 
