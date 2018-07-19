@@ -15,6 +15,8 @@ end
 post '/checkout' do
   @items = params[:item]
   @items.each do |item|
+    @session << item
+  end
 end
 
 
