@@ -13,10 +13,9 @@ get '/' do
 end
 
 post '/checkout' do
-  @items = params[:item]
-  @items.each do |item|
-    @session << item
-  end
+  @session = session
+  session[:item] = params[:item]
+  erb :checkout
 end
 
 
